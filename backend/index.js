@@ -4,6 +4,8 @@ const http = require('http');
 const server = http.createServer(app);
 const axios = require('axios')
 
+app.use(express.static('dist'))
+
 const io = require("socket.io")(server, {
     cors: {
         origin: "*",
