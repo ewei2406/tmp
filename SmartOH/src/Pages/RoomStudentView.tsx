@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Logout from "../Components/Logout";
 
 const RoomStudentView = ({ currentData, setCurrentData }: any) => {

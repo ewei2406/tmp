@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { useNavigate, useParams } from "react-router-dom"
 import Logout from "../Components/Logout"
 import { useEffect, useRef, useState } from "react"

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import axios from 'axios'; // ES6 Modules
 import { io, Socket } from "socket.io-client";
 

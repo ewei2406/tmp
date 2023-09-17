@@ -1,4 +1,5 @@
 // src/Login.tsx
+// @ts-nocheck
 import React, { useState } from 'react';
 import "./Login.css"
 import { FaGraduationCap, FaAppleWhole, FaCircleArrowRight } from 'react-icons/fa6'

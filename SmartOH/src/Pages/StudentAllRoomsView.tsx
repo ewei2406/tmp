@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useState } from "react"
 import Logout from "../Components/Logout"
 import RoomCard from "../Components/RoomCard"

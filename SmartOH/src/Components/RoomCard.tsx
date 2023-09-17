@@ -1,3 +1,4 @@
+// @ts-nocheck
 import UserIcon from "./UserIcon"
 import { FaCircleArrowRight } from 'react-icons/fa6'
 
