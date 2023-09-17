@@ -25,7 +25,7 @@ const App: React.FC = () => {
     const [socket, setSocket] = useState<Socket>();
 
     useEffect(() => {
-        const s = io("http://localhost:3000")
+        const s = io(":3000")
         setSocket(s)
         s.on('changed', m =>  {
             setRooms(m)

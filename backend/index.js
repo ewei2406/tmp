@@ -4,12 +4,13 @@ const http = require('http');
 const server = http.createServer(app);
 const axios = require('axios')
 
-app.use(express.static('dist'))
+app.use(express.static('dist', {
+    maxAge: 1
+}))
 
 const io = require("socket.io")(server, {
     cors: {
-        origin: "*",
-        methods: ["*"]
+        origin: "*"
     }
 });
 
@@ -39,7 +40,7 @@ rooms = {
                 id: "Alice",
                 timestamp: new Date(),
                 question: "How to print in python?",
-                beginHelpedByID: 'joe bob'
+                beginHelpedByID: ""
             },
             {
                 id: "Danny X",
@@ -244,6 +245,8 @@ app.get('/api/ml/summarize', async (req, res) => {
     axios.post('http://localhost:8000/current-topic', postData).then(result => {
         res.json(result.data)
         console.log(result.data)
+    }).catch(e => {
+        res.status(500).send()
     })
 })
 
